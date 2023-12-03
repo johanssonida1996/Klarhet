@@ -1,0 +1,46 @@
+/* -------------- Theme ---------------- */
+// Color - DARK
+$primary-dark: #f39c12; 
+$secondary-dark: #ecf0f1;  // Ljusblå
+$accent-dark-1: #3498db;     // Ljusblå
+    
+// Color - LIGHT   
+$primary-light: #0f4c75;  // Djupt turkos
+$secondary-light: #27ae60;      // Mörk smaragdgrön
+$accent-light-1: #e74c3c;      // Mörk korall
+
+// Colors
+$black: #252c30;
+$light-black: #616161;
+$white: #fff;
+$beige: #f6f5f2;
+$gray: #868585;
+$green: #787d62;
+
+// Font
+$openSans: 'Open Sans', sans-serif;
+
+// Font size
+$normal: 1rem;
+$text: 1rem;
+$h1: 3.5rem;
+$h2: 2.5rem;
+$h3: 1.5rem;
+$ingress: 1.25rem;
+$line-height: 1.5;
+
+
+
+// Font weight
+$light: 300;
+$regular: 400;
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;
+$solid: 900;
+
+// Container
+$grid-width: 1320px;
+$transition: all 0.3s ease-in-out;
+$box-shadow-light: 0 7px 14px rgba(0,0,0,.05);
+$box-shadow-dark: 0 7px 14px rgba(255, 255, 255, 0.05);

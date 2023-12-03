@@ -1,0 +1,47 @@
+@import 'variables';
+
+@import "components/header",
+         "components/hero",
+         "components/card",
+         "components/footer",
+         "components/section1",
+         "components/section2",
+         "components/section3";
+
+body{
+   margin: 0;
+   background-color: $beige;
+   font-family: $openSans;
+   font-weight: $regular;
+   font-size: $normal;
+   color: $black;
+   -webkit-text-size-adjust: 100%;
+   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+hr {
+   margin: 1rem 0;
+   color: inherit;
+   border: 0;
+   border-top: 1px solid;
+   opacity: 0.25;
+}
+
+.container-fluid{
+   padding: 0;
+   max-width: $grid-width;
+   margin: 0 auto; 
+}
+
+#section1, #section2, #section3{
+   min-height: 60vh;
+   padding: 6rem 32px;
+
+   @media (max-width: 766px) {
+      min-height: unset;
+      padding: 3rem 32px;
+   }
+}
+
+
+

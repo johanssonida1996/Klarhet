@@ -1,0 +1,44 @@
+#section1{
+   .ida-section1{
+      h2{
+         font-weight: $bold;
+      }
+      .team-member{
+         margin-top: 3rem;
+         margin-bottom: 3rem;
+         text-align: center;
+
+         .round-image-container{
+            height: 18rem;
+            margin-bottom: 2rem;
+            overflow: hidden;
+            img{
+               height: 100%;
+               object-fit: cover;
+               border-radius: 2%;
+               border: 1px solid $beige;
+           
+            }
+            &:hover{
+               transition: all 0.3s ease-in-out;
+               transform: scale(1.1); 
+            }
+         }
+      
+            a{
+               width: 2.8rem;
+               background-color: $beige;
+               border: none;
+               i{
+                  color: $black;
+                  font-size: 1.5rem;
+               }
+               &:hover{
+                  transition: all 0.3s ease-in-out;
+                  transform: scale(1.1); 
+               }
+            }
+            
+      }
+   }
+}

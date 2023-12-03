@@ -1,0 +1,117 @@
+// NAVBAR
+header{
+   width: 100%;
+    transition: all 0.5s;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    -webkit-transition: .5s all ease;
+    -o-transition: .5s all ease;
+    transition: .5s all ease;
+   .navbar{
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem 32px;
+      margin: 0 auto; 
+      transition: all 0.35s ease, padding 0.35s ease;
+
+   .navbar-collapse{
+      flex-grow: unset;
+   }
+   img{
+      height: 3.5rem;
+
+      &:hover{
+         transform: scale(1.1); 
+      }
+   }
+   .nav-link{
+      padding: 20px !important;
+      font-family: $openSans;
+      font-size: $text;
+      font-weight: $medium;
+
+      &:hover{
+         text-decoration: underline;
+         transform: scale(1.1); 
+      }
+      &.active{
+         font-weight: $semi-bold;
+      }
+   }
+   .dropdown-toggle{
+      padding-right: 0 !important;
+   }
+   .dropdown-menu[data-bs-popper]{
+      top: 70%;
+      right: 0;
+      left: unset;
+   }
+   .dropdown-item{
+      padding: 8px 16px;
+      i{
+         font-size: 0.9rem;
+         margin-right: 0.5rem;
+      }
+      &:hover{
+         background-color: $beige;
+         text-decoration: underline;
+      }
+   }
+    @media (max-width: 992px) { 
+      .navbar-collapse{
+         flex-grow: 1;
+         .navbar-nav{
+            padding-top: 1rem;
+            .nav-item{
+               .nav-link{
+                  padding: 16px 0 16px 0 !important;
+                  &:hover{
+                     transform: none; 
+                  }
+               }
+               .active{
+                  text-decoration: none;
+               }
+               .show{
+                  padding-bottom: 0 !important;
+               }
+               .dropdown-menu[data-bs-popper]{
+                     background: none;
+                     border: none;
+                     padding: 0;
+                  }
+            }
+
+         }
+      }
+      .ij-navbar-buttons{
+         display: flex;
+         justify-content: space-between;
+         width: 100%;
+
+         .navbar-toggler{
+            border: 2px solid $light-black;
+
+            &:focus{
+               color: $light-black;
+            }
+         }
+      }
+   }
+   }
+}
+header.fixed {
+   padding: 0;
+   background: $white;
+   box-shadow: 0 0 10px 0 rgba(0,0,0,.3);
+   -webkit-transition: .5s all ease;
+   -o-transition: .5s all ease;
+   transition: .5s all ease;
+   box-shadow: 0 0 10px 1px rgba(0,0,0,0.1);
+   position: fixed;
+
+   img{
+      height: 2.5rem;
+   }
+}
