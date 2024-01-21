@@ -95,7 +95,7 @@ header .navbar .dropdown-item:hover {
   }
 }
 
-header.fixed {
+header.sticky {
   padding: 0;
   background: #fff;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
@@ -105,7 +105,7 @@ header.fixed {
   box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
   position: fixed;
 }
-header.fixed img {
+header.sticky img {
   height: 2.5rem;
 }
 
@@ -489,7 +489,7 @@ h1, h2, h3, h4, p, a {
   content: "";
 }
 
-#cardSection .col-md-3 {
+#cardSection .col-lg-3 {
   padding: 12px;
 }
 #cardSection .card {

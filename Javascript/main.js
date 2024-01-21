@@ -4,9 +4,9 @@ window.onscroll = function() {
 
 function scrollFunction() {
     if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-        document.querySelector("header").classList.add("fixed");
+        document.querySelector("header").classList.add("sticky");
     } else {
-        document.querySelector("header").classList.remove("fixed");
+        document.querySelector("header").classList.remove("sticky");
     }
 }
 
@@ -88,6 +88,29 @@ for (let i = 1; i <= 8; i++) {
         });
     }
 }
+    // Lägg till en klickhändelse för kortlänkarna under #gridSection
+    document.querySelectorAll('.idatest a.link').forEach(cardLink => {
+        cardLink.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+                // Hämta höjden av den sticky navbaren
+                const navbarHeight = document.querySelector('nav').offsetHeight;
+
+                // Räkna ut den nya scrollpositionen för att korrekt visa sektionen
+                const offsetTop = targetElement.offsetTop - navbarHeight + 1;
+
+                // Rulla till den nya positionen med en mjuk övergång
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
 });
 
 
