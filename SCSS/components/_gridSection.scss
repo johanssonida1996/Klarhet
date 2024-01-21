@@ -1,0 +1,131 @@
+#gridSection {
+   .container-fluid {
+     .row {
+       // Första raden med 3 bilder
+       .row1{
+        padding: 16px;
+        position: relative;
+         img {
+           width: 100%;
+           height: auto;
+           object-fit: cover;
+           max-height: 200px;
+           transition: .2s all ease;
+           display: block;
+           opacity: 0.8;
+         }
+         .image-overlay {
+          position: absolute;
+          bottom: 0px;
+          left: 20px;
+          width: 100%;
+          color: #fff; 
+          padding: 10px; 
+          transition: opacity 0.3s ease; 
+          p{
+            color: $white;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            font-weight: 300;
+
+          }
+        }
+         &:hover {
+          img {
+            transform: scale(1.1); // Zooma in lite när du hover
+            cursor: pointer; // Ändra cursorn till en "pointer"
+            opacity: 1;
+          }
+          .image-overlay {
+            transform: scale(1.1);
+            cursor: pointer;
+          }
+        }
+       }
+ 
+       // Andra raden med 2 bilder
+       .col-md-6 {
+        padding: 16px;
+        position: relative;
+         img {
+           width: 100%;
+           height: auto;
+           object-fit: cover;
+           max-height: 250px;
+           transition: .2s all ease;
+           display: block;
+           opacity: 0.8;
+         }
+         .image-overlay {
+          position: absolute;
+          bottom: 0px;
+          right: 20px;
+          width: 100%;
+          color: #fff; 
+          padding: 10px; 
+          transition: opacity 0.3s ease; 
+          p{
+            color: $white;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            font-weight: 300;
+            text-align: end;
+
+          }
+        }
+         &:hover {
+          img {
+            transform: scale(1.1); // Zooma in lite när du hover
+            cursor: pointer; // Ändra cursorn till en "pointer"
+          }
+          .image-overlay {
+            transform: scale(1.1);
+            cursor: pointer;
+          }
+        }
+       }
+ 
+       // Tredje raden med 3 bilder
+       .row2 {
+        padding: 16px;
+        position: relative;
+         img {
+           width: 100%;
+           height: auto;
+           object-fit: cover;
+           max-height: 200px;
+           transition: .2s all ease;
+           display: block;
+           opacity: 0.8;
+         }
+         .image-overlay {
+          position: absolute;
+          bottom: 0px;
+          width: 100%;
+          color: #fff; 
+          padding: 10px; 
+          transition: opacity 0.3s ease; 
+          p{
+            color: $white;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            font-weight: 300;
+            text-align: center;
+
+          }
+        }
+         &:hover {
+          img {
+            transform: scale(1.1); // Zooma in lite när du hover
+            cursor: pointer; // Ändra cursorn till en "pointer"
+          }
+          .image-overlay {
+            transform: scale(1.1);
+            cursor: pointer;
+          }
+        }
+       }
+     }
+   }
+ }
+ 

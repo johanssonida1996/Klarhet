@@ -30,6 +30,7 @@ header{
       font-family: $openSans;
       font-size: $text;
       font-weight: $medium;
+      color: $black !important;
 
       &:hover{
          text-decoration: underline;
