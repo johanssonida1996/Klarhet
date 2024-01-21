@@ -131,7 +131,7 @@ header.fixed img {
 .ij-hero__content {
   z-index: 1; /* Ensure content appears above the image */
   padding: 0 32px;
-  max-width: 1320px;
+  max-width: 1440px;
   display: flex;
   justify-content: end;
   width: 100%;
@@ -405,115 +405,143 @@ h1, h2, h3, h4, p, a {
   color: #261911;
 }
 
-#gridSection .container-fluid .row .row1 {
-  padding: 16px;
+#gridSection .idatest {
+  height: 250px;
   position: relative;
+  padding: 16px;
 }
-#gridSection .container-fluid .row .row1 img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  max-height: 200px;
-  transition: 0.2s all ease;
-  display: block;
-  opacity: 0.8;
-}
-#gridSection .container-fluid .row .row1 .image-overlay {
-  position: absolute;
-  bottom: 0px;
-  left: 20px;
-  width: 100%;
-  color: #fff;
-  padding: 10px;
-  transition: opacity 0.3s ease;
-}
-#gridSection .container-fluid .row .row1 .image-overlay p {
-  color: #fff;
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  font-weight: 300;
-}
-#gridSection .container-fluid .row .row1:hover img {
-  transform: scale(1.1);
+#gridSection .idatest:hover {
   cursor: pointer;
+}
+#gridSection .idatest:hover img {
   opacity: 1;
 }
-#gridSection .container-fluid .row .row1:hover .image-overlay {
-  transform: scale(1.1);
-  cursor: pointer;
-}
-#gridSection .container-fluid .row .col-md-6 {
-  padding: 16px;
+#gridSection .idatest2 {
+  height: 350px;
   position: relative;
+  padding: 12px;
 }
-#gridSection .container-fluid .row .col-md-6 img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  max-height: 250px;
-  transition: 0.2s all ease;
-  display: block;
-  opacity: 0.8;
-}
-#gridSection .container-fluid .row .col-md-6 .image-overlay {
-  position: absolute;
-  bottom: 0px;
-  right: 20px;
-  width: 100%;
-  color: #fff;
-  padding: 10px;
-  transition: opacity 0.3s ease;
-}
-#gridSection .container-fluid .row .col-md-6 .image-overlay p {
-  color: #fff;
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  font-weight: 300;
-  text-align: end;
-}
-#gridSection .container-fluid .row .col-md-6:hover img {
-  transform: scale(1.1);
+#gridSection .idatest2:hover {
   cursor: pointer;
 }
-#gridSection .container-fluid .row .col-md-6:hover .image-overlay {
-  transform: scale(1.1);
-  cursor: pointer;
+#gridSection .idatest2:hover img {
+  opacity: 1;
 }
-#gridSection .container-fluid .row .row2 {
-  padding: 16px;
-  position: relative;
-}
-#gridSection .container-fluid .row .row2 img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  max-height: 200px;
-  transition: 0.2s all ease;
-  display: block;
-  opacity: 0.8;
-}
-#gridSection .container-fluid .row .row2 .image-overlay {
-  position: absolute;
-  bottom: 0px;
-  width: 100%;
-  color: #fff;
-  padding: 10px;
-  transition: opacity 0.3s ease;
-}
-#gridSection .container-fluid .row .row2 .image-overlay p {
-  color: #fff;
-  font-size: 1.5rem;
+#gridSection p {
   text-transform: uppercase;
-  font-weight: 300;
+}
+#gridSection .textDownLeft {
+  color: #fff;
+  font-size: 2rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: left;
+  left: 0;
+  padding: 16px 32px;
+  margin: 0;
+}
+#gridSection .textTopMiddle {
+  color: #fff;
+  font-size: 2rem;
+}
+#gridSection .textTopRight {
+  color: #fff;
+  font-size: 2rem;
+  position: absolute;
+  top: 0;
+}
+#gridSection .textDownRight {
+  color: #fff;
+  font-size: 2rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: right;
+  left: 0;
+  padding: 16px 32px;
+  margin: 0;
+}
+#gridSection .textDownMiddle {
+  color: #fff;
+  font-size: 2rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   text-align: center;
+  left: 0;
+  padding: 16px 32px;
+  margin: 0;
 }
-#gridSection .container-fluid .row .row2:hover img {
-  transform: scale(1.1);
+#gridSection img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+  transition: 0.2s all ease;
+}
+#gridSection .link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: "";
+}
+
+#cardSection .col-md-3 {
+  padding: 12px;
+}
+#cardSection .card {
+  height: 400px;
+  text-align: start;
+}
+#cardSection .card img {
+  height: 220px;
+  width: auto;
+  object-fit: cover;
+}
+#cardSection .card .card-body p {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+#cardSection .card .card-body .card-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#cardSection .card .card-body .card-links .read-more-link {
+  text-decoration: none;
+}
+#cardSection .card .card-body .card-links .read-more-link:hover {
+  text-decoration: underline;
   cursor: pointer;
 }
-#gridSection .container-fluid .row .row2:hover .image-overlay {
-  transform: scale(1.1);
-  cursor: pointer;
+#cardSection .card .card-body .card-links .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  background-color: #BFA8A3;
+  color: #fff;
+  text-align: center;
+  border: 2px solid #BFA8A3;
+}
+#cardSection .card .card-body .card-links .btn:hover {
+  background-color: #fff;
+  color: #261911;
+  border: 2px solid #BFA8A3;
+}
+#cardSection .card-collapsed {
+  height: 600px;
+}
+#cardSection .card-collapsed .card-body p {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 7;
+  -webkit-box-orient: vertical;
 }
 
 body {
@@ -537,7 +565,7 @@ hr {
 
 .container-fluid {
   padding: 0;
-  max-width: 1320px;
+  max-width: 1440px;
   margin: 0 auto;
 }
 

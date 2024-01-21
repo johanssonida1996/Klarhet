@@ -1,131 +1,88 @@
-#gridSection {
-   .container-fluid {
-     .row {
-       // Första raden med 3 bilder
-       .row1{
-        padding: 16px;
-        position: relative;
-         img {
-           width: 100%;
-           height: auto;
-           object-fit: cover;
-           max-height: 200px;
-           transition: .2s all ease;
-           display: block;
-           opacity: 0.8;
-         }
-         .image-overlay {
-          position: absolute;
-          bottom: 0px;
-          left: 20px;
-          width: 100%;
-          color: #fff; 
-          padding: 10px; 
-          transition: opacity 0.3s ease; 
-          p{
-            color: $white;
-            font-size: 1.5rem;
-            text-transform: uppercase;
-            font-weight: 300;
+#gridSection{
+  .idatest{
+    height: 250px;
+    position: relative;
+    padding: 16px;
 
-          }
-        }
-         &:hover {
-          img {
-            transform: scale(1.1); // Zooma in lite när du hover
-            cursor: pointer; // Ändra cursorn till en "pointer"
-            opacity: 1;
-          }
-          .image-overlay {
-            transform: scale(1.1);
-            cursor: pointer;
-          }
-        }
-       }
- 
-       // Andra raden med 2 bilder
-       .col-md-6 {
-        padding: 16px;
-        position: relative;
-         img {
-           width: 100%;
-           height: auto;
-           object-fit: cover;
-           max-height: 250px;
-           transition: .2s all ease;
-           display: block;
-           opacity: 0.8;
-         }
-         .image-overlay {
-          position: absolute;
-          bottom: 0px;
-          right: 20px;
-          width: 100%;
-          color: #fff; 
-          padding: 10px; 
-          transition: opacity 0.3s ease; 
-          p{
-            color: $white;
-            font-size: 1.5rem;
-            text-transform: uppercase;
-            font-weight: 300;
-            text-align: end;
+    &:hover{
+      cursor: pointer;
+      img{
+        opacity: 1;
+      }
+    }
+  }
+  .idatest2{
+    height: 350px;
+    position: relative;
+    padding: 12px;
 
-          }
-        }
-         &:hover {
-          img {
-            transform: scale(1.1); // Zooma in lite när du hover
-            cursor: pointer; // Ändra cursorn till en "pointer"
-          }
-          .image-overlay {
-            transform: scale(1.1);
-            cursor: pointer;
-          }
-        }
-       }
- 
-       // Tredje raden med 3 bilder
-       .row2 {
-        padding: 16px;
-        position: relative;
-         img {
-           width: 100%;
-           height: auto;
-           object-fit: cover;
-           max-height: 200px;
-           transition: .2s all ease;
-           display: block;
-           opacity: 0.8;
-         }
-         .image-overlay {
-          position: absolute;
-          bottom: 0px;
-          width: 100%;
-          color: #fff; 
-          padding: 10px; 
-          transition: opacity 0.3s ease; 
-          p{
-            color: $white;
-            font-size: 1.5rem;
-            text-transform: uppercase;
-            font-weight: 300;
-            text-align: center;
-
-          }
-        }
-         &:hover {
-          img {
-            transform: scale(1.1); // Zooma in lite när du hover
-            cursor: pointer; // Ändra cursorn till en "pointer"
-          }
-          .image-overlay {
-            transform: scale(1.1);
-            cursor: pointer;
-          }
-        }
-       }
-     }
-   }
- }
+    &:hover{
+      cursor: pointer;
+      img{
+        opacity: 1;
+      }
+    }
+  }
+  p{
+    text-transform: uppercase;
+  }
+  .textDownLeft{
+    color: $white;
+    font-size: 2rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: left;
+    left: 0;
+    padding: 16px 32px;
+    margin: 0;
+  }
+  .textTopMiddle{
+    color: $white;
+    font-size: 2rem;
+  }
+  .textTopRight{
+    color: $white;
+    font-size: 2rem;
+    position: absolute;
+    top: 0;
+  }
+  .textDownRight{
+    color: $white;
+    font-size: 2rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: right;
+    left: 0;
+    padding: 16px 32px;
+    margin: 0;
+  }
+  .textDownMiddle{
+    color: $white;
+    font-size: 2rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    left: 0;
+    padding: 16px 32px;
+    margin: 0;
+  }
+  img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+    transition: .2s all ease;
+  }
+  .link{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: "";
+  }
+}
  
