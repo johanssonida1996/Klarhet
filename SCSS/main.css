@@ -12,7 +12,7 @@ header {
 header .navbar {
   display: flex;
   justify-content: space-between;
-  padding: 1rem 32px;
+  padding: 16px 32px;
   margin: 0 auto;
   transition: all 0.35s ease, padding 0.35s ease;
 }
@@ -104,6 +104,7 @@ header.sticky {
   transition: 0.5s all ease;
   box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
   position: fixed;
+  top: 0px;
 }
 header.sticky img {
   height: 2.5rem;
