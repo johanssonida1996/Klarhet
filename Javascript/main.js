@@ -77,6 +77,21 @@ document.addEventListener("DOMContentLoaded", function () {
             rect.right <= (window.innerWidth || document.documentElement.clientWidth)
         );
     }
+
+          // Hämta länken för att läsa mer
+          var readMoreLink = document.getElementById('readMoreLink1');
+          // Hämta card-body-elementet
+          var cardBody = document.querySelector('#ij-card1 .card-body');
+    
+          // Lägg till en händelselyssnare för klick på länken för att läsa mer
+          readMoreLink.addEventListener('click', function() {
+             // Om card-body har klassen 'card-collapsed', ta bort den, annars lägg till den
+             if (cardBody.classList.contains('card-collapsed')) {
+                cardBody.classList.remove('card-collapsed');
+             } else {
+                cardBody.classList.add('card-collapsed');
+             }
+          });
 });
 
 
