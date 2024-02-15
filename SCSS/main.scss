@@ -9,7 +9,9 @@
          "components/section3",
          "components/base",
          "components/gridSection",
-         "components/cardSection";
+         "components/cardSection",
+         "components/aboutUs",
+         "components/goBack";
 
 body{
    margin: 0;
@@ -36,15 +38,54 @@ hr {
    margin: 0 auto; 
 }
 
-#section1, #section2, #section3{
-   min-height: 60vh;
-   padding: 6rem 32px;
+#gridSection, #section1, #section2, #section3, #cardSection{
+   padding: 4rem 16px;
 
    @media (max-width: 766px) {
       min-height: unset;
-      padding: 3rem 32px;
+      padding: 3rem 16px;
+   }
+}
+.img-height{
+   height: 400px !important;
+}
+.img-noZoom{
+   &:hover{
+      transition: none !important;
+      transform: none !important; 
    }
 }
 
+.ij-contact_links{
+   display: flex;
+
+   a{
+      justify-content: center;
+      background-color: $beige;
+      border-color: $beige;
+      padding: 0.5rem;
+      width: 50px;
+      height: 50px;
+      i{
+         margin-left: 0 !important;
+      }
+   }
+}
+.ij-contact_links2{
+   display: flex;
+
+   a{
+      justify-content: center;
+      background-color: white;
+      border-color: white;
+      padding: 0.5rem;
+      width: 50px;
+      height: 50px;
+      i{
+         margin-left: 0 !important;
+         color: black;
+      }
+   }
+}
 
 

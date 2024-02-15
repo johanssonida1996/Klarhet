@@ -7,6 +7,10 @@
          margin-top: 3rem;
          margin-bottom: 3rem;
          text-align: center;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         position: relative;
 
          .round-image-container{
             height: 18rem;
@@ -16,7 +20,6 @@
                height: 100%;
                object-fit: cover;
                border-radius: 2%;
-               border: 1px solid $beige;
            
             }
             &:hover{
@@ -26,19 +29,27 @@
          }
       
             a{
-               width: 2.8rem;
-               background-color: $beige;
-               border: none;
-               i{
-                  color: $black;
-                  font-size: 1.5rem;
+               text-decoration: none;
+               font-size: 1.2rem;
+               font-weight: 600;
+               margin-top: 1rem;
+               &::after{
+                  content: '';
+                  position: absolute;
+                  top: 0;
+                  right: 0;
+                  bottom: 0;
+                  left: 0;
                }
-               &:hover{
-                  transition: all 0.3s ease-in-out;
-                  transform: scale(1.1); 
-               }
-            }
+
+            } 
             
+         &:hover{
+            cursor: pointer;
+            a{
+               text-decoration: underline;
+            }
+         }
       }
    }
 }

@@ -3,19 +3,23 @@
       padding: 12px;
    }
    .card{
-      height: 400px;
+      height: 500px;
       text-align: start;
       img{
-         height: 220px;
+         height: 280px;
          width: auto;
          object-fit: cover;
       }
 
       .card-body{
+         display: flex;
+         flex-direction: column;
+         justify-content: space-between;
+         padding: 1rem 16px;
          p{
             overflow: hidden;
             display: -webkit-box;
-            -webkit-line-clamp: 2;
+            -webkit-line-clamp: 4;
             -webkit-box-orient: vertical;
          }
          .card-links{

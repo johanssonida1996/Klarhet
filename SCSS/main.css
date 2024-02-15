@@ -124,7 +124,7 @@ header.sticky img {
   justify-content: center;
 }
 .ij-hero__image {
-  opacity: 0.8;
+  opacity: 0.9;
   width: 100%; /* Make the image fill the container */
   height: 50vh;
   object-fit: cover;
@@ -293,6 +293,10 @@ header.sticky img {
   margin-top: 3rem;
   margin-bottom: 3rem;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
 }
 #section1 .ida-section1 .team-member .round-image-container {
   height: 18rem;
@@ -303,40 +307,78 @@ header.sticky img {
   height: 100%;
   object-fit: cover;
   border-radius: 2%;
-  border: 1px solid #E1C9C1;
 }
 #section1 .ida-section1 .team-member .round-image-container:hover {
   transition: all 0.3s ease-in-out;
   transform: scale(1.1);
 }
 #section1 .ida-section1 .team-member a {
-  width: 2.8rem;
-  background-color: #E1C9C1;
-  border: none;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 1rem;
 }
-#section1 .ida-section1 .team-member a i {
-  color: #261911;
-  font-size: 1.5rem;
+#section1 .ida-section1 .team-member a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
-#section1 .ida-section1 .team-member a:hover {
-  transition: all 0.3s ease-in-out;
-  transform: scale(1.1);
+#section1 .ida-section1 .team-member:hover {
+  cursor: pointer;
+}
+#section1 .ida-section1 .team-member:hover a {
+  text-decoration: underline;
 }
 
 .ij-section2 {
+  background-color: white;
   display: flex;
   align-items: center;
 }
 .ij-section2__container {
+  padding: 4rem 0 !important;
   display: flex;
   align-items: center;
 }
-.ij-section2__container h3 {
+.ij-section2__container .ij-section2__text {
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.ij-section2__container .ij-section2__text h3 {
   font-size: 1.5rem;
   margin-bottom: 2rem;
 }
-.ij-section2__container p {
+.ij-section2__container .ij-section2__text p {
   margin-bottom: 2rem;
+}
+.ij-section2__container .ij-section2__text button {
+  all: unset;
+  background-color: #E1C9C1;
+  border: 2px solid #E1C9C1;
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  font-size: 1rem;
+}
+.ij-section2__container .ij-section2__text button:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+.ij-section2__container .ij-section2__text a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+.ij-section2__container .ij-section2__text a i {
+  margin-left: 0.5rem;
+}
+.ij-section2__container .ij-section2__text a:hover {
+  text-decoration: underline;
 }
 .ij-section2__img {
   display: flex;
@@ -356,6 +398,9 @@ header.sticky img {
   .ij-section2__container {
     display: block;
   }
+  .ij-section2__img img {
+    padding: 0 16px;
+  }
 }
 
 .ij-section3 {
@@ -363,6 +408,7 @@ header.sticky img {
   align-items: center;
 }
 .ij-section3__container {
+  padding: 4rem 0 !important;
   display: flex;
   align-items: center;
 }
@@ -375,12 +421,42 @@ header.sticky img {
     flex-direction: row;
   }
 }
-.ij-section3__container h3 {
+.ij-section3__container .ij-section3__text {
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.ij-section3__container .ij-section3__text h3 {
   font-size: 1.5rem;
   margin-bottom: 2rem;
 }
-.ij-section3__container p {
+.ij-section3__container .ij-section3__text p {
   margin-bottom: 2rem;
+}
+.ij-section3__container .ij-section3__text button {
+  all: unset;
+  background-color: white;
+  border: 2px solid white;
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  font-size: 1rem;
+}
+.ij-section3__container .ij-section3__text button:hover {
+  background-color: #E1C9C1;
+  color: white;
+  cursor: pointer;
+}
+.ij-section3__container .ij-section3__text a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+.ij-section3__container .ij-section3__text a i {
+  margin-left: 0.5rem;
+}
+.ij-section3__container .ij-section3__text a:hover {
+  text-decoration: underline;
 }
 .ij-section3__img {
   display: flex;
@@ -400,6 +476,9 @@ header.sticky img {
   .ij-section3__container {
     display: block;
   }
+  .ij-section3__img img {
+    padding: 0 16px;
+  }
 }
 
 h1, h2, h3, h4, p, a {
@@ -415,7 +494,7 @@ h1, h2, h3, h4, p, a {
   cursor: pointer;
 }
 #gridSection .idatest:hover img {
-  opacity: 1;
+  opacity: 0.8;
 }
 #gridSection .idatest2 {
   height: 350px;
@@ -426,7 +505,7 @@ h1, h2, h3, h4, p, a {
   cursor: pointer;
 }
 #gridSection .idatest2:hover img {
-  opacity: 1;
+  opacity: 0.8;
 }
 #gridSection p {
   text-transform: uppercase;
@@ -478,7 +557,6 @@ h1, h2, h3, h4, p, a {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  opacity: 0.8;
   transition: 0.2s all ease;
 }
 #gridSection .link {
@@ -494,18 +572,24 @@ h1, h2, h3, h4, p, a {
   padding: 12px;
 }
 #cardSection .card {
-  height: 400px;
+  height: 500px;
   text-align: start;
 }
 #cardSection .card img {
-  height: 220px;
+  height: 280px;
   width: auto;
   object-fit: cover;
+}
+#cardSection .card .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem 16px;
 }
 #cardSection .card .card-body p {
   overflow: hidden;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
 }
 #cardSection .card .card-body .card-links {
@@ -545,6 +629,33 @@ h1, h2, h3, h4, p, a {
   -webkit-box-orient: vertical;
 }
 
+#aboutUs > div {
+  padding: 2rem 16px;
+}
+#aboutUs .col-md-12 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#aboutUs h1 {
+  text-align: center;
+  margin: 0 0 2rem 0;
+}
+#aboutUs p {
+  max-width: 800px;
+}
+
+#goBack a {
+  font-size: 1rem;
+  text-decoration: none;
+}
+#goBack a i {
+  margin-right: 0.5rem;
+}
+#goBack a:hover {
+  text-decoration: underline;
+}
+
 body {
   margin: 0;
   background-color: #E1C9C1;
@@ -570,15 +681,54 @@ hr {
   margin: 0 auto;
 }
 
-#section1, #section2, #section3 {
-  min-height: 60vh;
-  padding: 6rem 32px;
+#gridSection, #section1, #section2, #section3, #cardSection {
+  padding: 4rem 16px;
 }
 @media (max-width: 766px) {
-  #section1, #section2, #section3 {
+  #gridSection, #section1, #section2, #section3, #cardSection {
     min-height: unset;
-    padding: 3rem 32px;
+    padding: 3rem 16px;
   }
+}
+
+.img-height {
+  height: 400px !important;
+}
+
+.img-noZoom:hover {
+  transition: none !important;
+  transform: none !important;
+}
+
+.ij-contact_links {
+  display: flex;
+}
+.ij-contact_links a {
+  justify-content: center;
+  background-color: #E1C9C1;
+  border-color: #E1C9C1;
+  padding: 0.5rem;
+  width: 50px;
+  height: 50px;
+}
+.ij-contact_links a i {
+  margin-left: 0 !important;
+}
+
+.ij-contact_links2 {
+  display: flex;
+}
+.ij-contact_links2 a {
+  justify-content: center;
+  background-color: white;
+  border-color: white;
+  padding: 0.5rem;
+  width: 50px;
+  height: 50px;
+}
+.ij-contact_links2 a i {
+  margin-left: 0 !important;
+  color: black;
 }
 
 /*# sourceMappingURL=main.css.map */
