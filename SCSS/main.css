@@ -1,14 +1,5 @@
+@charset "UTF-8";
 /* -------------- Theme ---------------- */
-header {
-  width: 100%;
-  transition: all 0.5s;
-  top: 0;
-  left: 0;
-  z-index: 999;
-  -webkit-transition: 0.5s all ease;
-  -o-transition: 0.5s all ease;
-  transition: 0.5s all ease;
-}
 header .navbar {
   display: flex;
   justify-content: space-between;
@@ -95,8 +86,9 @@ header .navbar .dropdown-item:hover {
   }
 }
 
-header.sticky {
-  padding: 0;
+nav.sticky {
+  width: 100%;
+  padding: 1rem 32px;
   background: #fff;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
   -webkit-transition: 0.5s all ease;
@@ -105,8 +97,9 @@ header.sticky {
   box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
   position: fixed;
   top: 0px;
+  z-index: 9999;
 }
-header.sticky img {
+nav.sticky img {
   height: 2.5rem;
 }
 
@@ -244,8 +237,13 @@ header.sticky img {
 }
 
 .ij-footer {
-  margin: 4rem 0 0 0;
   background-color: #fff;
+}
+.ij-footer a {
+  text-decoration: none;
+}
+.ij-footer a:hover {
+  text-decoration: underline;
 }
 .ij-footer .row {
   display: flex;
@@ -253,13 +251,13 @@ header.sticky img {
   padding: 3rem 32px;
 }
 .ij-footer__icons ul {
-  padding: 0.5rem 0 !important;
+  padding: 0 !important;
   list-style: none;
   display: flex;
 }
 .ij-footer__icons ul li {
-  width: 50px;
-  height: 50px;
+  width: 25px;
+  height: 25px;
   background: #fff;
   border-radius: 50%;
   opacity: 1;
@@ -269,10 +267,8 @@ header.sticky img {
 }
 .ij-footer__icons ul li i {
   position: absolute;
-  left: 50%;
-  top: 50%;
   transform: translate(-50%, -50%);
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   color: #261911;
 }
 .ij-footer__icons ul li:hover {
@@ -286,7 +282,15 @@ header.sticky img {
   margin-bottom: 0 !important;
 }
 
-#section1 .ida-section1 h2 {
+#section1 .ida-section1__heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#section1 .ida-section1__heading p {
+  max-width: 700px;
+}
+#section1 .ida-section1__heading h2 {
   font-weight: 700;
 }
 #section1 .ida-section1 .team-member {
@@ -629,8 +633,8 @@ h1, h2, h3, h4, p, a {
   -webkit-box-orient: vertical;
 }
 
-#aboutUs > div {
-  padding: 2rem 16px;
+#aboutUs .row {
+  justify-content: center;
 }
 #aboutUs .col-md-12 {
   display: flex;
@@ -645,6 +649,54 @@ h1, h2, h3, h4, p, a {
   max-width: 800px;
 }
 
+.moreInfo {
+  margin: 3rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.moreInfo .row {
+  padding: 2rem 32px;
+}
+.moreInfo .row .col-md-12 {
+  background-color: white;
+  border-radius: 5px;
+  padding: 2rem 32px;
+  max-width: 700px;
+}
+.moreInfo .row .col-md-12 .goBack {
+  text-decoration: none;
+  cursor: pointer;
+  text-align: left;
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+.moreInfo .row .col-md-12 .goBack:hover {
+  text-decoration: underline;
+}
+
+.organisation .row {
+  background: url("/assets/img/organisation.jpeg");
+  background-size: cover;
+}
+
+.human .row {
+  background: url("/assets/img/manniskaOchsinne.jpeg");
+  background-size: cover;
+}
+
+.learn .row {
+  background: url("/assets/img/anna/Lära.webp");
+  background-size: cover;
+}
+
+.about {
+  margin-top: 4rem;
+}
+.about .col-md-12 {
+  padding: 0 32px;
+}
+
 #goBack a {
   font-size: 1rem;
   text-decoration: none;
@@ -654,6 +706,53 @@ h1, h2, h3, h4, p, a {
 }
 #goBack a:hover {
   text-decoration: underline;
+}
+
+.moreInfo {
+  padding: 0 !important;
+}
+.moreInfo .ij-hero__item {
+  align-items: center;
+}
+.moreInfo .ij-hero__item .ij-hero__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 5px;
+  width: auto;
+  max-width: 800px;
+  align-items: center;
+  margin: 32px;
+}
+.moreInfo .ij-hero__item .ij-hero__content h1 {
+  font-size: 1.5rem;
+}
+.moreInfo .ij-hero__item .ij-hero__content p {
+  width: 100%;
+  max-width: 700px;
+}
+.moreInfo .ij-hero__item img {
+  height: 80vh;
+}
+@media (max-width: 712px) {
+  .moreInfo .ij-hero__item img {
+    height: 110vh;
+  }
+}
+@media (max-width: 496px) {
+  .moreInfo .ij-hero__item img {
+    height: 150vh;
+  }
+}
+@media (max-width: 400px) {
+  .moreInfo .ij-hero__item img {
+    height: 180vh;
+  }
+}
+.moreInfo .ij-hero__item .moreInfoImg {
+  height: 100vh;
 }
 
 body {
@@ -682,7 +781,8 @@ hr {
 }
 
 #gridSection, #section1, #section2, #section3, #cardSection {
-  padding: 4rem 16px;
+  padding: 0 16px;
+  margin: 4rem 0;
 }
 @media (max-width: 766px) {
   #gridSection, #section1, #section2, #section3, #cardSection {

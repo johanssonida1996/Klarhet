@@ -1,6 +1,6 @@
 #aboutUs{
-   > div{
-      padding: 2rem 16px;
+   .row{
+      justify-content: center;
    }
    .col-md-12{
       display: flex;
@@ -13,5 +13,58 @@
    }
    p{
       max-width: 800px;
+   }
+}
+.moreInfo{
+   margin: 3rem 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   .row{
+      padding: 2rem 32px;
+     
+
+      .col-md-12{
+         background-color: white;
+         border-radius: 5px;
+         padding: 2rem 32px;
+         max-width: 700px;
+
+         .goBack{
+            text-decoration: none;
+            cursor: pointer;
+            text-align: left;
+            margin-bottom: 0.5rem;
+            width: 100%;
+            &:hover{
+               text-decoration: underline;
+            }
+         }
+      }
+   }
+
+}
+.organisation{
+   .row{
+      background: url('/assets/img/organisation.jpeg');
+      background-size: cover;
+   }
+}
+.human{
+   .row{
+      background: url('/assets/img/manniskaOchsinne.jpeg');
+      background-size: cover;
+   }
+}
+.learn{
+   .row{
+      background: url('/assets/img/anna/Lära.webp');
+      background-size: cover;
+   }
+}
+.about{
+   margin-top: 4rem;
+   .col-md-12{
+      padding: 0 32px;
    }
 }

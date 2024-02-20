@@ -1,13 +1,13 @@
 // NAVBAR
 header{
-   width: 100%;
-    transition: all 0.5s;
-    top: 0;
-    left: 0;
-    z-index: 999;
-    -webkit-transition: .5s all ease;
-    -o-transition: .5s all ease;
-    transition: .5s all ease;
+   // width: 100%;
+   //  transition: all 0.5s;
+   //  top: 0;
+   //  left: 0;
+   //  z-index: 999;
+   //  -webkit-transition: .5s all ease;
+   //  -o-transition: .5s all ease;
+   //  transition: .5s all ease;
    .navbar{
       display: flex;
       justify-content: space-between;
@@ -102,8 +102,9 @@ header{
    }
    }
 }
-header.sticky {
-   padding: 0;
+nav.sticky {
+   width: 100%;
+   padding: 1rem 32px;
    background: $white;
    box-shadow: 0 0 10px 0 rgba(0,0,0,.3);
    -webkit-transition: .5s all ease;
@@ -112,8 +113,9 @@ header.sticky {
    box-shadow: 0 0 10px 1px rgba(0,0,0,0.1);
    position: fixed;
    top: 0px;
-
+   z-index: 9999;
    img{
       height: 2.5rem;
    }
 }
+

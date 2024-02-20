@@ -1,7 +1,15 @@
 #section1{
    .ida-section1{
-      h2{
-         font-weight: $bold;
+      &__heading{
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         p{
+            max-width: 700px;
+         }
+         h2{
+            font-weight: $bold;
+         }
       }
       .team-member{
          margin-top: 3rem;

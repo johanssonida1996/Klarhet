@@ -1,0 +1,42 @@
+.moreInfo{
+   padding: 0 !important;
+   .ij-hero__item{
+      align-items: center;
+      .ij-hero__content{
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         background-color: white;
+         padding: 2rem;
+         border-radius: 5px;
+         width: auto;
+         max-width: 800px;
+         align-items: center;
+         margin: 32px;
+         h1{
+            font-size: 1.5rem;
+         }
+         p{
+            width: 100%;
+            max-width: 700px;
+         }
+      }
+      img{
+         height: 80vh;
+         @media (max-width: 712px) {
+            height: 110vh;
+         }
+         @media (max-width: 496px) {
+            height: 150vh;
+         }
+         @media (max-width: 400px) {
+            height: 180vh;
+         }
+      }
+      .moreInfoImg{
+         height: 100vh;
+      }
+   }
+
+
+}
