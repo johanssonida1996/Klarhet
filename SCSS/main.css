@@ -668,7 +668,7 @@ h1, h2, h3, h4, p, a {
   text-decoration: none;
   cursor: pointer;
   text-align: left;
-  margin-bottom: 0.5rem;
+  margin-bottom: 2rem;
   width: 100%;
 }
 .moreInfo .row .col-md-12 .goBack:hover {
@@ -677,16 +677,18 @@ h1, h2, h3, h4, p, a {
 
 .organisation .row {
   background: url("/assets/img/organisation.jpeg");
+  background: url("https://raw.githubusercontent.com/johanssonida1996/Klarhet/main/assets/img/organisation.jpeg");
   background-size: cover;
 }
 
 .human .row {
-  background: url("/assets/img/manniskaOchsinne.jpeg");
+  background: url("https://raw.githubusercontent.com/johanssonida1996/Klarhet/main/assets/img/manniskaOchsinne.jpeg");
   background-size: cover;
 }
 
 .learn .row {
   background: url("/assets/img/anna/Lära.webp");
+  background: url("https://raw.githubusercontent.com/johanssonida1996/Klarhet/main/assets/img/anna/L%C3%A4ra.webp");
   background-size: cover;
 }
 
@@ -706,53 +708,6 @@ h1, h2, h3, h4, p, a {
 }
 #goBack a:hover {
   text-decoration: underline;
-}
-
-.moreInfo {
-  padding: 0 !important;
-}
-.moreInfo .ij-hero__item {
-  align-items: center;
-}
-.moreInfo .ij-hero__item .ij-hero__content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: white;
-  padding: 2rem;
-  border-radius: 5px;
-  width: auto;
-  max-width: 800px;
-  align-items: center;
-  margin: 32px;
-}
-.moreInfo .ij-hero__item .ij-hero__content h1 {
-  font-size: 1.5rem;
-}
-.moreInfo .ij-hero__item .ij-hero__content p {
-  width: 100%;
-  max-width: 700px;
-}
-.moreInfo .ij-hero__item img {
-  height: 80vh;
-}
-@media (max-width: 712px) {
-  .moreInfo .ij-hero__item img {
-    height: 110vh;
-  }
-}
-@media (max-width: 496px) {
-  .moreInfo .ij-hero__item img {
-    height: 150vh;
-  }
-}
-@media (max-width: 400px) {
-  .moreInfo .ij-hero__item img {
-    height: 180vh;
-  }
-}
-.moreInfo .ij-hero__item .moreInfoImg {
-  height: 100vh;
 }
 
 body {
