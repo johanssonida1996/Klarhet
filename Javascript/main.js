@@ -1,6 +1,5 @@
 let navbar = document.getElementById("navbar");
 let navHeight = navbar.offsetHeight;
-let homeSection = document.getElementById("home");
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -24,13 +23,16 @@ window.addEventListener("scroll", () => {
     let navbarOffset = navbar.offsetTop;
 
     // Loopa genom varje sektion och justera paddingen för att undvika att innehållet täcks av den klibbiga navigationslisten
-    document.querySelectorAll('section').forEach(section => {
-        if (section.id !== "home") { // Kontrollera om sektionen inte är "home"
+    let sections = document.querySelectorAll('section');
+    sections.forEach((section, index) => {
+        if (index !== 0) { // Kontrollera om sektionen inte är den första sektionen på sidan
             if (scrollPos >= section.offsetTop - navHeight) {
                 section.style.paddingTop = navHeight + "px";
             } else {
                 section.style.paddingTop = "0";
             }
+        } else {
+            section.style.paddingTop = "0"; // Ta bort paddingen från den första sektionen på sidan
         }
     });
 

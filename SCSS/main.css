@@ -348,7 +348,7 @@ nav.sticky img {
   align-items: center;
 }
 .ij-section2__container .ij-section2__text {
-  padding: 2rem 0;
+  padding: 2rem 32px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -426,7 +426,7 @@ nav.sticky img {
   }
 }
 .ij-section3__container .ij-section3__text {
-  padding: 2rem 0;
+  padding: 2rem 32px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
