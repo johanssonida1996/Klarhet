@@ -1,4 +1,6 @@
 #section1{
+   background: white;
+
    .ida-section1{
       &__heading{
          display: flex;
@@ -8,7 +10,12 @@
             max-width: 700px;
          }
          h2{
-            font-weight: $bold;
+            a{
+               text-decoration: none;
+               &:hover{
+                  text-decoration: underline;
+               }
+            }
          }
       }
       .team-member{
@@ -30,10 +37,7 @@
                border-radius: 2%;
            
             }
-            &:hover{
-               transition: all 0.3s ease-in-out;
-               transform: scale(1.1); 
-            }
+       
          }
       
             a{
@@ -54,6 +58,11 @@
             
          &:hover{
             cursor: pointer;
+            img{
+               transition: all 0.3s ease-in-out;
+               transform: scale(1.1); 
+            }
+
             a{
                text-decoration: underline;
             }

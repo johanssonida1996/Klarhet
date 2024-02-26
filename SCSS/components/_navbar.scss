@@ -1,0 +1,127 @@
+// // NAVBAR
+.navbar {
+    img{
+      height: 3.5rem;
+
+      &:hover{
+         transform: scale(1.1); 
+      }
+   }
+ }
+ @media (min-width: 992px){
+   .navbar-expand-lg {
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+     }
+ }
+
+ #mainNav {
+  padding: 1.5rem 32px;
+  background-color: $beige;
+
+  &.navbar-shrink {
+    background-color: white;
+
+    .navbar-brand {
+      font-size: 1.25em;
+      img {
+        height: 2.5rem;
+      }
+    }
+    .navbar-nav .nav-item .nav-link {
+      color: $black;
+  
+      &.active,
+      &:hover {
+        text-decoration: underline;
+        font-weight: 700;
+      }
+    }
+  }
+
+  .navbar-toggler {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    background-color: transparent;
+    border: 1px solid $black;
+    color: $black;
+
+    i{
+      font-size: 0.9rem;
+      color: $black;
+    }
+  }
+
+.navbar-nav .nav-item .nav-link {
+    font-size: 1rem;
+    color: $black;
+    font-weight: 500;
+    text-transform: none;
+
+    &.active,
+    &:hover {
+      text-decoration: underline;
+      font-weight: 700;
+    }
+  }
+
+  @media (min-width: 992px) {
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+    border: none;
+    background-color: transparent;
+    transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
+
+    .navbar-brand {
+      font-size: 1.5em;
+      transition: font-size 0.3s ease-in-out;
+      img {
+        height: 3rem;
+        transition: height 0.3s ease-in-out;
+      }
+    }
+
+    .navbar-nav .nav-item .nav-link {
+      font-size: 1rem;
+      color: $black;
+      font-weight: 500;
+      text-transform: none;
+  
+      &.active,
+      &:hover {
+        transition: all 0.1s ease-in-out;
+        text-decoration: underline;
+        font-weight: 700;
+      }
+    }
+    &.navbar-shrink {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      background-color: white;
+
+      .navbar-brand {
+        font-size: 1.25em;
+        img {
+          height: 2.5rem;
+        }
+      }
+      .navbar-nav .nav-item .nav-link {
+        color: $black;
+    
+        &.active,
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .navbar-nav .nav-item {
+      margin-right: 1rem;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

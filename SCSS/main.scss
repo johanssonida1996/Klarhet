@@ -1,6 +1,6 @@
 @import 'variables';
 
-@import "components/header",
+@import "components/navbar",
          "components/hero",
          "components/card",
          "components/footer",
@@ -12,7 +12,8 @@
          "components/cardSection",
          "components/aboutUs",
          "components/goBack",
-         "components/moreInfo.scss";
+         "components/moreInfo.scss",
+         "components/newsLetter";
 
 body{
    margin: 0;
@@ -23,6 +24,10 @@ body{
    color: $black;
    -webkit-text-size-adjust: 100%;
    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+   font-weight: 400;
+}
+h1,h2,h3,h4,h5{
+   font-weight: 500;
 }
 
 hr {
@@ -40,8 +45,7 @@ hr {
 }
 
 #gridSection, #section1, #section2, #section3, #cardSection{
-   padding: 0 16px;
-   margin: 4rem 0;
+   padding: 6rem 32px;
 
    @media (max-width: 766px) {
       min-height: unset;

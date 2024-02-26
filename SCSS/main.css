@@ -1,128 +1,139 @@
 @charset "UTF-8";
 /* -------------- Theme ---------------- */
-header .navbar {
-  display: flex;
-  justify-content: space-between;
-  padding: 16px 32px;
-  margin: 0 auto;
-  transition: all 0.35s ease, padding 0.35s ease;
-}
-header .navbar .navbar-collapse {
-  flex-grow: unset;
-}
-header .navbar img {
+.navbar img {
   height: 3.5rem;
 }
-header .navbar img:hover {
+.navbar img:hover {
   transform: scale(1.1);
-}
-header .navbar .nav-link {
-  padding: 20px !important;
-  font-family: "Open Sans", sans-serif;
-  font-size: 1rem;
-  font-weight: 500;
-  color: #261911 !important;
-}
-header .navbar .nav-link:hover {
-  text-decoration: underline;
-  transform: scale(1.1);
-}
-header .navbar .nav-link.active {
-  font-weight: 600;
-}
-header .navbar .dropdown-toggle {
-  padding-right: 0 !important;
-}
-header .navbar .dropdown-menu[data-bs-popper] {
-  top: 70%;
-  right: 0;
-  left: unset;
-}
-header .navbar .dropdown-item {
-  padding: 8px 16px;
-}
-header .navbar .dropdown-item i {
-  font-size: 0.9rem;
-  margin-right: 0.5rem;
-}
-header .navbar .dropdown-item:hover {
-  background-color: #E1C9C1;
-  text-decoration: underline;
-}
-@media (max-width: 992px) {
-  header .navbar .navbar-collapse {
-    flex-grow: 1;
-  }
-  header .navbar .navbar-collapse .navbar-nav {
-    padding-top: 1rem;
-  }
-  header .navbar .navbar-collapse .navbar-nav .nav-item .nav-link {
-    padding: 16px 0 16px 0 !important;
-  }
-  header .navbar .navbar-collapse .navbar-nav .nav-item .nav-link:hover {
-    transform: none;
-  }
-  header .navbar .navbar-collapse .navbar-nav .nav-item .active {
-    text-decoration: none;
-  }
-  header .navbar .navbar-collapse .navbar-nav .nav-item .show {
-    padding-bottom: 0 !important;
-  }
-  header .navbar .navbar-collapse .navbar-nav .nav-item .dropdown-menu[data-bs-popper] {
-    background: none;
-    border: none;
-    padding: 0;
-  }
-  header .navbar .ij-navbar-buttons {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-  }
-  header .navbar .ij-navbar-buttons .navbar-toggler {
-    border: 2px solid #616161;
-  }
-  header .navbar .ij-navbar-buttons .navbar-toggler:focus {
-    color: #616161;
-  }
 }
 
-nav.sticky {
-  width: 100%;
-  padding: 1rem 32px;
-  background: #fff;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
-  -webkit-transition: 0.5s all ease;
-  -o-transition: 0.5s all ease;
-  transition: 0.5s all ease;
-  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
-  position: fixed;
-  top: 0px;
-  z-index: 9999;
+@media (min-width: 992px) {
+  .navbar-expand-lg {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
 }
-nav.sticky img {
+#mainNav {
+  padding: 1.5rem 32px;
+  background-color: #E1C9C1;
+}
+#mainNav.navbar-shrink {
+  background-color: white;
+}
+#mainNav.navbar-shrink .navbar-brand {
+  font-size: 1.25em;
+}
+#mainNav.navbar-shrink .navbar-brand img {
   height: 2.5rem;
+}
+#mainNav.navbar-shrink .navbar-nav .nav-item .nav-link {
+  color: #261911;
+}
+#mainNav.navbar-shrink .navbar-nav .nav-item .nav-link.active, #mainNav.navbar-shrink .navbar-nav .nav-item .nav-link:hover {
+  text-decoration: underline;
+  font-weight: 700;
+}
+#mainNav .navbar-toggler {
+  padding: 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  background-color: transparent;
+  border: 1px solid #261911;
+  color: #261911;
+}
+#mainNav .navbar-toggler i {
+  font-size: 0.9rem;
+  color: #261911;
+}
+#mainNav .navbar-nav .nav-item .nav-link {
+  font-size: 1rem;
+  color: #261911;
+  font-weight: 500;
+  text-transform: none;
+}
+#mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
+  text-decoration: underline;
+  font-weight: 700;
+}
+@media (min-width: 992px) {
+  #mainNav {
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+    border: none;
+    background-color: transparent;
+    transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
+  }
+  #mainNav .navbar-brand {
+    font-size: 1.5em;
+    transition: font-size 0.3s ease-in-out;
+  }
+  #mainNav .navbar-brand img {
+    height: 3rem;
+    transition: height 0.3s ease-in-out;
+  }
+  #mainNav .navbar-nav .nav-item .nav-link {
+    font-size: 1rem;
+    color: #261911;
+    font-weight: 500;
+    text-transform: none;
+  }
+  #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
+    transition: all 0.1s ease-in-out;
+    text-decoration: underline;
+    font-weight: 700;
+  }
+  #mainNav.navbar-shrink {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: white;
+  }
+  #mainNav.navbar-shrink .navbar-brand {
+    font-size: 1.25em;
+  }
+  #mainNav.navbar-shrink .navbar-brand img {
+    height: 2.5rem;
+  }
+  #mainNav.navbar-shrink .navbar-nav .nav-item .nav-link {
+    color: #261911;
+  }
+  #mainNav.navbar-shrink .navbar-nav .nav-item .nav-link.active, #mainNav.navbar-shrink .navbar-nav .nav-item .nav-link:hover {
+    text-decoration: underline;
+  }
+  #mainNav .navbar-nav .nav-item {
+    margin-right: 1rem;
+  }
+  #mainNav .navbar-nav .nav-item:last-child {
+    margin-right: 0;
+  }
 }
 
 /* HERO */
-.ij-hero {
+header {
+  padding-top: 6rem;
+}
+@media (max-width: 992px) {
+  header {
+    padding-top: 6rem;
+  }
+}
+header .ij-hero {
   position: relative; /* Add relative positioning to the container */
   overflow: hidden; /* Ensure the image doesn't overflow the container */
-  padding: 0rem 0 3rem 0 !important;
 }
-.ij-hero__item {
+header .ij-hero__item {
   position: relative; /* Add relative positioning to the item */
   display: flex;
   align-items: flex-end; /* Align items to the bottom */
   height: 100%;
   justify-content: center;
 }
-.ij-hero__image {
+header .ij-hero__image {
   opacity: 0.9;
   width: 100%; /* Make the image fill the container */
   height: 50vh;
   object-fit: cover;
 }
-.ij-hero__content {
+header .ij-hero__content {
   z-index: 1; /* Ensure content appears above the image */
   padding: 0 32px;
   max-width: 1440px;
@@ -132,11 +143,11 @@ nav.sticky img {
   /* Add positioning for the content */
   position: absolute;
 }
-.ij-hero__content h1 {
+header .ij-hero__content h1 {
   margin-bottom: 2rem;
   font-size: 3.5rem;
 }
-.ij-hero__content p {
+header .ij-hero__content p {
   width: 50%;
 }
 
@@ -282,6 +293,9 @@ nav.sticky img {
   margin-bottom: 0 !important;
 }
 
+#section1 {
+  background: white;
+}
 #section1 .ida-section1__heading {
   display: flex;
   flex-direction: column;
@@ -290,8 +304,11 @@ nav.sticky img {
 #section1 .ida-section1__heading p {
   max-width: 700px;
 }
-#section1 .ida-section1__heading h2 {
-  font-weight: 700;
+#section1 .ida-section1__heading h2 a {
+  text-decoration: none;
+}
+#section1 .ida-section1__heading h2 a:hover {
+  text-decoration: underline;
 }
 #section1 .ida-section1 .team-member {
   margin-top: 3rem;
@@ -312,10 +329,6 @@ nav.sticky img {
   object-fit: cover;
   border-radius: 2%;
 }
-#section1 .ida-section1 .team-member .round-image-container:hover {
-  transition: all 0.3s ease-in-out;
-  transform: scale(1.1);
-}
 #section1 .ida-section1 .team-member a {
   text-decoration: none;
   font-size: 1.2rem;
@@ -333,6 +346,10 @@ nav.sticky img {
 #section1 .ida-section1 .team-member:hover {
   cursor: pointer;
 }
+#section1 .ida-section1 .team-member:hover img {
+  transition: all 0.3s ease-in-out;
+  transform: scale(1.1);
+}
 #section1 .ida-section1 .team-member:hover a {
   text-decoration: underline;
 }
@@ -343,7 +360,6 @@ nav.sticky img {
   align-items: center;
 }
 .ij-section2__container {
-  padding: 4rem 0 !important;
   display: flex;
   align-items: center;
 }
@@ -412,7 +428,6 @@ nav.sticky img {
   align-items: center;
 }
 .ij-section3__container {
-  padding: 4rem 0 !important;
   display: flex;
   align-items: center;
 }
@@ -499,6 +514,8 @@ h1, h2, h3, h4, p, a {
 }
 #gridSection .idatest:hover img {
   opacity: 0.8;
+  transition: all 0.3s ease-in-out;
+  transform: scale(1.01);
 }
 #gridSection .idatest2 {
   height: 350px;
@@ -510,6 +527,8 @@ h1, h2, h3, h4, p, a {
 }
 #gridSection .idatest2:hover img {
   opacity: 0.8;
+  transition: all 0.3s ease-in-out;
+  transform: scale(1.01);
 }
 #gridSection p {
   text-transform: uppercase;
@@ -650,7 +669,7 @@ h1, h2, h3, h4, p, a {
 }
 
 .moreInfo {
-  margin: 3rem 0;
+  padding: 6rem 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -693,10 +712,11 @@ h1, h2, h3, h4, p, a {
 }
 
 .about {
-  margin-top: 4rem;
+  padding: 4rem 32px;
 }
-.about .col-md-12 {
-  padding: 0 32px;
+
+.margin {
+  margin: 4rem;
 }
 
 #goBack a {
@@ -710,6 +730,57 @@ h1, h2, h3, h4, p, a {
   text-decoration: underline;
 }
 
+.newsLetter {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.newsLetter > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 700px;
+  padding: 4rem 32px;
+}
+.newsLetter > div form {
+  margin: 2rem 0;
+  width: 100%;
+  display: flex;
+}
+@media (max-width: 500px) {
+  .newsLetter > div form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: unset;
+  }
+  .newsLetter > div form button {
+    margin-top: 1rem;
+    width: fit-content;
+  }
+}
+.newsLetter > div form input {
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 1px solid rgba(99, 99, 99, 0.2);
+}
+.newsLetter > div form input:focus-visible {
+  outline: #E1C9C1 auto 1px;
+}
+.newsLetter > div form button {
+  margin-left: 1rem;
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  background-color: #BFA8A3;
+  color: #fff;
+  text-align: center;
+  border: 2px solid #BFA8A3;
+}
+
 body {
   margin: 0;
   background-color: #E1C9C1;
@@ -719,6 +790,11 @@ body {
   color: #261911;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: 500;
 }
 
 hr {
@@ -736,8 +812,7 @@ hr {
 }
 
 #gridSection, #section1, #section2, #section3, #cardSection {
-  padding: 0 16px;
-  margin: 4rem 0;
+  padding: 6rem 32px;
 }
 @media (max-width: 766px) {
   #gridSection, #section1, #section2, #section3, #cardSection {
