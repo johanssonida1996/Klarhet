@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /* -------------- Theme ---------------- */
 .navbar img {
-  height: 3.5rem;
+  height: 2.5rem;
 }
 .navbar img:hover {
   transform: scale(1.1);
@@ -14,7 +14,7 @@
   }
 }
 #mainNav {
-  padding: 1.5rem 32px;
+  padding: 1rem 32px;
   background-color: #E1C9C1;
 }
 #mainNav.navbar-shrink {
@@ -364,7 +364,6 @@ header .ij-hero__content p {
   align-items: center;
 }
 .ij-section2__container .ij-section2__text {
-  padding: 2rem 32px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -441,7 +440,6 @@ header .ij-hero__content p {
   }
 }
 .ij-section3__container .ij-section3__text {
-  padding: 2rem 32px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -652,6 +650,9 @@ h1, h2, h3, h4, p, a {
   -webkit-box-orient: vertical;
 }
 
+#aboutUs {
+  padding: 6rem 32px;
+}
 #aboutUs .row {
   justify-content: center;
 }
@@ -709,14 +710,6 @@ h1, h2, h3, h4, p, a {
   background: url("/assets/img/anna/Lära.webp");
   background: url("https://raw.githubusercontent.com/johanssonida1996/Klarhet/main/assets/img/anna/L%C3%A4ra.webp");
   background-size: cover;
-}
-
-.about {
-  padding: 4rem 32px;
-}
-
-.margin {
-  margin: 4rem;
 }
 
 #goBack a {
@@ -817,7 +810,6 @@ hr {
 @media (max-width: 766px) {
   #gridSection, #section1, #section2, #section3, #cardSection {
     min-height: unset;
-    padding: 3rem 16px;
   }
 }
 
