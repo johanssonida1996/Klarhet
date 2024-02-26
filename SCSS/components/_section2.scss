@@ -38,7 +38,12 @@
                margin-left: 0.5rem;
             }
             &:hover{
-               text-decoration: underline;
+               text-decoration: none;
+               background-color: white;
+               border: 1px solid $beige;
+               i{
+                  color: $beige;
+               }
             }
          }
       }

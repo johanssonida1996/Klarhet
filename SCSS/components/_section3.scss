@@ -42,9 +42,14 @@
             align-items: center;
             i{
                margin-left: 0.5rem;
+               color: $beige;
             }
             &:hover{
-               text-decoration: underline;
+               background-color: $beige;
+               border: 1px solid white;
+               i{
+                  color: white;
+               }
             }
          }
       }

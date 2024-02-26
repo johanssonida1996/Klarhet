@@ -37,8 +37,26 @@
             text-align: left;
             margin-bottom: 2rem;
             width: 100%;
+            i{
+               margin-right: 0.5rem;
+            }
             &:hover{
                text-decoration: underline;
+            }
+         }
+         h1{
+            margin: 0 !important;
+         }
+         .learn-link{
+            a{
+               background-color: $dark-beige;
+               border: 1px solid $dark-beige;
+               padding: 0.5rem 1rem;
+               &:hover{
+                  background-color: white;
+                  border: 1px solid $dark-beige;
+                  color: $dark-beige;
+               }
             }
          }
       }

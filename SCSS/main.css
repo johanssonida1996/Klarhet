@@ -397,7 +397,12 @@ header .ij-hero__content p {
   margin-left: 0.5rem;
 }
 .ij-section2__container .ij-section2__text a:hover {
-  text-decoration: underline;
+  text-decoration: none;
+  background-color: white;
+  border: 1px solid #E1C9C1;
+}
+.ij-section2__container .ij-section2__text a:hover i {
+  color: #E1C9C1;
 }
 .ij-section2__img {
   display: flex;
@@ -471,9 +476,14 @@ header .ij-hero__content p {
 }
 .ij-section3__container .ij-section3__text a i {
   margin-left: 0.5rem;
+  color: #E1C9C1;
 }
 .ij-section3__container .ij-section3__text a:hover {
-  text-decoration: underline;
+  background-color: #E1C9C1;
+  border: 1px solid white;
+}
+.ij-section3__container .ij-section3__text a:hover i {
+  color: white;
 }
 .ij-section3__img {
   display: flex;
@@ -691,8 +701,24 @@ h1, h2, h3, h4, p, a {
   margin-bottom: 2rem;
   width: 100%;
 }
+.moreInfo .row .col-md-12 .goBack i {
+  margin-right: 0.5rem;
+}
 .moreInfo .row .col-md-12 .goBack:hover {
   text-decoration: underline;
+}
+.moreInfo .row .col-md-12 h1 {
+  margin: 0 !important;
+}
+.moreInfo .row .col-md-12 .learn-link a {
+  background-color: #BFA8A3;
+  border: 1px solid #BFA8A3;
+  padding: 0.5rem 1rem;
+}
+.moreInfo .row .col-md-12 .learn-link a:hover {
+  background-color: white;
+  border: 1px solid #BFA8A3;
+  color: #BFA8A3;
 }
 
 .organisation .row {
@@ -715,6 +741,7 @@ h1, h2, h3, h4, p, a {
 #goBack a {
   font-size: 1rem;
   text-decoration: none;
+  display: flex;
 }
 #goBack a i {
   margin-right: 0.5rem;

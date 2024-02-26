@@ -27,14 +27,36 @@
 //     // Det skulle kräva serverkod (t.ex. med Node.js) för att hantera e-postskickandet.
 // }
 
-document.addEventListener('DOMContentLoaded', event => {
 
+function clearSessionStorage() {
+    sessionStorage.removeItem('scrollToSectionId');
+}
+
+window.onload = function() {
+    scrollFunction(); 
+    window.onscroll = function() {
+        scrollFunction(); // Kör funktionen varje gång användaren scrollar
+    };
+
+    var sessionStorageId = sessionStorage.getItem('scrollToSectionId');
+    console.log(sessionStorageId);
+    if(sessionStorageId !== null){
+        scrollToSection(sessionStorageId);
+        window.addEventListener('scroll', clearSessionStorage);
+        document.addEventListener('click', clearSessionStorage);
+    }
+   
+};
+
+
+function scrollFunction() {
     // Navbar shrink function
     var navbarShrink = function () {
         const navbarCollapsible = document.body.querySelector('#mainNav');
         if (!navbarCollapsible) {
             return;
         }
+        let offset; // Flytta deklarationen hit
         if (window.scrollY === 0) {
             navbarCollapsible.classList.remove('navbar-shrink')
         } else {
@@ -45,94 +67,54 @@ document.addEventListener('DOMContentLoaded', event => {
     // Shrink the navbar 
     navbarShrink();
 
-    // Shrink the navbar when page is scrolled
-    document.addEventListener('scroll', navbarShrink);
-
-    //  Activate Bootstrap scrollspy on the main nav element
-    const mainNav = document.body.querySelector('#mainNav');
-  
-    if (mainNav) {
-        new bootstrap.ScrollSpy(document.body, {
-            target: '#mainNav',
-            rootMargin: '0px 0px -40%',
+    // Handle clicks on all links on the page
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetSectionId = anchor.getAttribute('href').slice(1);
+            scrollToSection(targetSectionId);
         });
-    };
+    });
 
-    // Collapse responsive navbar when toggler is visible
-    const navbarToggler = document.body.querySelector('.navbar-toggler');
-    const responsiveNavItems = [].slice.call(
-        document.querySelectorAll('#navbarResponsive .nav-link')
-    );
+    // // Set margin-top for each section to accommodate the fixed navbar
+    const navbarHeight = 82;
+    document.querySelectorAll('[id^="section3"]').forEach(section => {
+        section.style.marginTop = `${navbarHeight}px`;
+    });
 
-    responsiveNavItems.map(function (responsiveNavItem) {
-        responsiveNavItem.addEventListener('click', (event) => {
-            // Get the target section from href attribute
-            const targetSectionId = responsiveNavItem.getAttribute('href').slice(1);
-            const targetSection = document.getElementById(targetSectionId);
-            if (targetSection) {
-                // Calculate the offset considering padding
-                let offset;
-                if (window.scrollY === 0) {
-                    // If the navbar is in the top position, use the full height (96px)
-                    if (window.innerWidth <= 996) {
-                        offset = targetSection.offsetTop - document.getElementById('mainNav').offsetHeight + 248;
-                    }
-                    else{
-                        let offsetStart = targetSection.offsetTop - document.getElementById('mainNav').offsetHeight;
-                        offset = offsetStart + 14;
-                    }
-                } else {
-                    if (window.innerWidth <= 996) {
-                        offset = targetSection.offsetTop - document.getElementById('mainNav').offsetHeight + 248;
-                    }
-                    else{
-                        offset = targetSection.offsetTop - document.getElementById('mainNav').offsetHeight;
-                    }
-                  
-                }
-    
-                // Wait for a short delay before scrolling
-                setTimeout(() => {
-                    // Scroll to the target section with offset
-                    window.scrollTo({
-                        top: offset,
-                        behavior: 'smooth'
-                    });
-                    // Close the navbar if it's open
-                    if (window.getComputedStyle(navbarToggler).display !== 'none') {
-                        navbarToggler.click();
-                    }
-                }, 10); // Adjust the delay time if needed
+    document.querySelectorAll('.goBack').forEach(link => {
+        link.addEventListener('click', function(event) {
+            // Extrahera href-attributet för den klickade länken
+            const href = link.getAttribute('href');
+            
+            // Om href-attributet finns och innehåller "#ij-card"
+            if (href && href.includes('#ij-card')) {
+                // Extrahera id:et från href-attributet
+                const targetSectionId = href.split('#')[1];
+                
+                // Spara id:et i sessionStorage
+                sessionStorage.setItem('scrollToSectionId', targetSectionId);
+
+                scrollToSection(targetSectionId);
             }
         });
     });
-    
 
-        // Function to handle scrolling to target section
-        function scrollToSection(targetSectionId) {
-            const targetSection = document.getElementById(targetSectionId);
-            if (targetSection) {
-                // Calculate the offset considering padding
-                let offset = targetSection.offsetTop - document.getElementById('mainNav').offsetHeight;
-                // Check if the target section ID contains 'ij-card' and adjust offset
-                if (targetSectionId.includes('ij-card')) {
-                    offset -= 40; // Add 60px for '#ij-card' sections
-                }
-                // Scroll to the target section with offset
-                window.scrollTo({
-                    top: offset,
-                    behavior: 'smooth'
-                });
-            }
+}
+
+function scrollToSection(targetSectionId) {
+    const targetSection = document.getElementById(targetSectionId);
+    console.log('är här', targetSection);
+    if (targetSection) {
+        let offset = targetSection.offsetTop - document.getElementById('mainNav').offsetHeight;
+        if (targetSectionId.includes('ij-card')) {
+            offset -= 40; 
+            console.log('är här också');
         }
-    
-        // Handle clicks on all links on the page
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetSectionId = anchor.getAttribute('href').slice(1);
-                scrollToSection(targetSectionId);
-            });
+        // Scroll to the target section with offset
+        window.scrollTo({
+            top: offset,
+            behavior: 'smooth'
         });
-
-});
+    }
+}
