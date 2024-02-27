@@ -1,26 +1,27 @@
 // // NAVBAR
 .navbar {
-    img{
-      height: 2.5rem;
+  img {
+    height: 2.5rem;
 
-      &:hover{
-         transform: scale(1.1); 
-      }
-   }
- }
- @media (min-width: 992px){
-   .navbar-expand-lg {
-      flex-wrap: nowrap;
-      justify-content: flex-start;
-     }
- }
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+@media (min-width: 992px) {
+  .navbar-expand-lg {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+}
 
- #mainNav {
+#mainNav {
   padding: 1rem 32px;
   background-color: $beige;
 
   &.navbar-shrink {
     background-color: white;
+    box-shadow: $box-shadow;
 
     .navbar-brand {
       font-size: 1.25em;
@@ -30,9 +31,11 @@
     }
     .navbar-nav .nav-item .nav-link {
       color: $black;
-  
-      &.active,
       &:hover {
+        text-decoration: underline;
+        transition: 0.3s ease-in-out;
+      }
+      &.active {
         text-decoration: underline;
         font-weight: 700;
       }
@@ -47,20 +50,24 @@
     border: 1px solid $black;
     color: $black;
 
-    i{
+    i {
       font-size: 0.9rem;
       color: $black;
     }
   }
 
-.navbar-nav .nav-item .nav-link {
+  .navbar-nav .nav-item .nav-link {
     font-size: 1rem;
     color: $black;
     font-weight: 500;
     text-transform: none;
 
-    &.active,
     &:hover {
+      text-decoration: underline;
+      transition: 0.3s ease-in-out;
+    }
+
+    &.active {
       text-decoration: underline;
       font-weight: 700;
     }
@@ -71,7 +78,9 @@
     padding-bottom: 1.2rem;
     border: none;
     background-color: transparent;
-    transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
+    transition:
+      padding-top 0.3s ease-in-out,
+      padding-bottom 0.3s ease-in-out;
 
     .navbar-brand {
       font-size: 1.5em;
@@ -87,12 +96,10 @@
       color: $black;
       font-weight: 500;
       text-transform: none;
-  
+
       &.active,
       &:hover {
-        transition: all 0.1s ease-in-out;
         text-decoration: underline;
-        font-weight: 700;
       }
     }
     &.navbar-shrink {
@@ -108,7 +115,7 @@
       }
       .navbar-nav .nav-item .nav-link {
         color: $black;
-    
+
         &.active,
         &:hover {
           text-decoration: underline;

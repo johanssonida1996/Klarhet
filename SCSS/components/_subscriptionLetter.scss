@@ -1,0 +1,81 @@
+#subscriptionLetter {
+   padding: 2rem 32px;
+   background-color: $white;
+   box-shadow: $box-shadow;
+   .newsLetter {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      &__form {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         width: 100%;
+         h3 {
+            font-size: 1.5rem;
+            margin: 0;
+         }
+
+         form {
+            margin: 1rem;
+            display: flex;
+            min-width: 35%;
+
+            @media (max-width: 500px) {
+               display: flex;
+               flex-direction: column;
+               align-items: center;
+               min-height: unset;
+               button {
+                  margin-top: 1rem;
+                  width: fit-content;
+               }
+            }
+            input {
+               width: 100%;
+               padding: 10px 20px;
+               border-radius: 5px;
+               border: 1px solid rgba(99, 99, 99, 0.2);
+               font-size: 0.9rem;
+               &:focus-visible {
+                  outline: $beige auto 1px;
+               }
+            }
+            button {
+               margin-left: 1rem;
+               display: inline-block;
+               padding: 10px 20px;
+               border-radius: 50px;
+               text-decoration: none;
+               background-color: $beige;
+               color: $black;
+               text-align: center;
+               border: 2px solid $white;
+               font-size: 0.9rem;
+               font-weight: 500;
+
+               &:hover {
+                  background-color: transparent;
+                  color: $black;
+                  border-color: $beige;
+               }
+            }
+         }
+      }
+      &__text {
+         p {
+            font-size: 0.8rem;
+         }
+      }
+      @media (max-width: 991px) {
+         &__form {
+            flex-direction: column;
+            form {
+               width: 100%;
+            }
+         }
+      }
+   }
+}

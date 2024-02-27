@@ -1,95 +1,15 @@
-@import 'variables';
+@import 'utils/variables';
 
 @import "components/navbar",
-         "components/hero",
-         "components/card",
-         "components/footer",
-         "components/section1",
-         "components/section2",
-         "components/section3",
-         "components/base",
+         "components/section",
+         "components/section-imgAndtext",
          "components/gridSection",
          "components/cardSection",
-         "components/aboutUs",
-         "components/goBack",
-         "components/newsLetter";
+         "components/subscriptionLetter",
+         "components/moreInfo";
 
-body{
-   margin: 0;
-   background-color: $beige;
-   font-family: $openSans;
-   font-weight: $regular;
-   font-size: $normal;
-   color: $black;
-   -webkit-text-size-adjust: 100%;
-   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-   font-weight: 400;
-}
-h1,h2,h3,h4,h5{
-   font-weight: 500;
-}
-
-hr {
-   margin: 1rem 0;
-   color: inherit;
-   border: 0;
-   border-top: 1px solid;
-   opacity: 0.25;
-}
-
-.container-fluid{
-   padding: 0;
-   max-width: $grid-width;
-   margin: 0 auto; 
-}
-
-#gridSection, #section1, #section2, #section3, #cardSection{
-   padding: 6rem 32px;
-
-   @media (max-width: 766px) {
-      min-height: unset;
-   }
-}
-.img-height{
-   height: 400px !important;
-}
-.img-noZoom{
-   &:hover{
-      transition: none !important;
-      transform: none !important; 
-   }
-}
-
-.ij-contact_links{
-   display: flex;
-
-   a{
-      justify-content: center;
-      background-color: $beige;
-      border-color: $beige;
-      padding: 0.5rem;
-      width: 50px;
-      height: 50px;
-      i{
-         margin-left: 0 !important;
-      }
-   }
-}
-.ij-contact_links2{
-   display: flex;
-
-   a{
-      justify-content: center;
-      background-color: white;
-      border-color: white;
-      padding: 0.5rem;
-      width: 50px;
-      height: 50px;
-      i{
-         margin-left: 0 !important;
-         color: black;
-      }
-   }
-}
+@import  "base/header",
+         "base/footer",
+         "base/base";
 
 

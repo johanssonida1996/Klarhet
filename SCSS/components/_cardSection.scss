@@ -1,67 +1,56 @@
-#cardSection{
-   .col-lg-3{
+#cardSection {
+   .col-lg-3 {
       padding: 12px;
    }
-   .card{
+   .card {
       height: 500px;
       text-align: start;
-      img{
+      h3 {
+         font-size: 1.5rem !important;
+      }
+      img {
          height: 280px;
          width: auto;
          object-fit: cover;
       }
-
-      .card-body{
+      .card-body {
          display: flex;
          flex-direction: column;
          justify-content: space-between;
          padding: 1rem 16px;
-         p{
+         p {
             overflow: hidden;
             display: -webkit-box;
             -webkit-line-clamp: 4;
             -webkit-box-orient: vertical;
          }
-         .card-links{
+         .card-links {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            .read-more-link{
+            .link {
                text-decoration: none;
-               &:hover{
+               &:hover {
                   text-decoration: underline;
                   cursor: pointer;
                }
             }
-            .btn{
+            .btn {
                display: inline-block;
                padding: 10px 20px;
-               border-radius: 50px; 
+               border-radius: 50px;
                text-decoration: none;
-               background-color: #BFA8A3; 
-               color: #fff; 
+               background-color: #bfa8a3;
+               color: #fff;
                text-align: center;
-               border: 2px solid #BFA8A3;
+               border: 2px solid #bfa8a3;
 
-               &:hover{
+               &:hover {
                   background-color: $white;
                   color: $black;
-                  border: 2px solid #BFA8A3;
+                  border: 2px solid #bfa8a3;
                }
             }
-         }
-      }
-
-   }
-   .card-collapsed{
-      height: 600px;
-
-      .card-body{
-         p{
-            overflow: hidden;
-            display: -webkit-box;
-            -webkit-line-clamp: 7;
-            -webkit-box-orient: vertical;
          }
       }
    }

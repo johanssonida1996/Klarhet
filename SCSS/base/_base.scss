@@ -1,0 +1,91 @@
+body {
+   margin: 0;
+   background-color: $beige;
+   font-family: $openSans;
+   font-weight: $regular;
+   font-size: $normal;
+   color: $black;
+   -webkit-text-size-adjust: 100%;
+   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+   font-weight: 400;
+}
+hr {
+   margin: 1rem 0;
+   color: inherit;
+   border: 0;
+   border-top: 1px solid;
+   opacity: 0.25;
+}
+.container-fluid {
+   padding: 0;
+   max-width: $grid-width;
+   margin: 0 auto;
+}
+
+#ij-aboutUs-startpage,
+#gridSection,
+#aboutCompany,
+#organisation,
+#human,
+#section-katarina,
+#section-anna,
+#cardSection,
+#learn {
+   padding: 6rem 32px;
+
+   @media (max-width: 766px) {
+      min-height: unset;
+   }
+}
+h1,
+h2,
+h3,
+h4,
+p,
+a {
+   color: $black;
+}
+h1 {
+   font-size: 3rem;
+   font-weight: 500;
+   margin-bottom: 2rem;
+}
+h2 {
+   font-size: 2.25rem;
+   font-weight: 500;
+}
+h3 {
+   font-size: 1.75rem;
+   font-weight: 500;
+}
+h4 {
+   font-size: 1.5rem;
+   font-weight: 500;
+}
+a:focus-visible,
+img:focus-visible {
+   outline: 2px solid $black !important;
+   box-shadow: $box-shadow !important;
+}
+a:-webkit-any-link:focus-visible {
+   outline-offset: 0 !important;
+}
+.img-height {
+   height: 400px !important;
+}
+.img-noZoom {
+   &:hover {
+      transition: none !important;
+      transform: none !important;
+   }
+}
+
+.backgroundWhite {
+   background-color: $white;
+}
+.extraPadding {
+   padding: 9rem 32px 6rem 32px !important;
+}
+.moreInfoPadding {
+   padding: 9rem 0 6rem 0 !important;
+}

@@ -1,36 +1,50 @@
-#gridSection{
-  .idatest{
+#gridSection {
+  .ij-col4 {
     height: 250px;
     position: relative;
     padding: 16px;
 
-    &:hover{
+    &:hover {
       cursor: pointer;
-      img{
+      img {
         opacity: 0.8;
         transition: all 0.3s ease-in-out;
-        transform: scale(1.01); 
+        transform: scale(1.01);
       }
     }
   }
-  .idatest2{
+  .ij-col6 {
     height: 350px;
     position: relative;
     padding: 12px;
 
-    &:hover{
+    &:hover {
       cursor: pointer;
-      img{
+      img {
         opacity: 0.8;
         transition: all 0.3s ease-in-out;
-        transform: scale(1.01); 
+        transform: scale(1.01);
       }
     }
   }
-  p{
+  h2 {
     text-transform: uppercase;
   }
-  .textDownLeft{
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: 0.2s all ease;
+  }
+  .link {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: "";
+  }
+  .textDownLeft {
     color: $white;
     font-size: 2rem;
     position: absolute;
@@ -41,17 +55,17 @@
     padding: 16px 32px;
     margin: 0;
   }
-  .textTopMiddle{
+  .textTopMiddle {
     color: $white;
     font-size: 2rem;
   }
-  .textTopRight{
+  .textTopRight {
     color: $white;
     font-size: 2rem;
     position: absolute;
     top: 0;
   }
-  .textDownRight{
+  .textDownRight {
     color: $white;
     font-size: 2rem;
     position: absolute;
@@ -62,7 +76,7 @@
     padding: 16px 32px;
     margin: 0;
   }
-  .textDownMiddle{
+  .textDownMiddle {
     color: $white;
     font-size: 2rem;
     position: absolute;
@@ -73,19 +87,4 @@
     padding: 16px 32px;
     margin: 0;
   }
-  img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    transition: .2s all ease;
-  }
-  .link{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    content: "";
-  }
 }
- 

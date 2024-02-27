@@ -1,0 +1,47 @@
+//FOOTER
+.ij-footer {
+   background-color: $beige;
+   a {
+      text-decoration: none;
+      &:hover {
+         text-decoration: underline;
+      }
+   }
+   .row {
+      display: flex;
+      justify-content: space-between;
+      padding: 3rem 32px;
+   }
+   &__icons {
+      ul {
+         padding: 0 !important;
+         list-style: none;
+         display: flex;
+
+         li {
+            display: flex;
+            align-items: center;
+            min-height: 35px;
+            min-width: 35px;
+            a {
+               padding: 0.5rem 0;
+
+               i {
+                  font-size: 1.2rem;
+                  color: $black;
+               }
+               &:hover {
+                  cursor: pointer;
+                  transform: scale(1.1);
+               }
+            }
+         }
+      }
+   }
+   &__text {
+      padding: 1rem 0;
+      p {
+         margin-bottom: 0 !important;
+      }
+   }
+}
