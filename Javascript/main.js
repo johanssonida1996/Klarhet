@@ -1,30 +1,30 @@
 //Mail to newsletter
-// document.getElementById("subscriptionForm").addEventListener("submit", function(event) {
-//     event.preventDefault(); // Förhindra standardbeteendet för formuläret att skickas
+document.getElementById("subscriptionForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Förhindra standardbeteendet för formuläret att skickas
 
-//     // Hämta e-postadressen från formuläret
-//     var email = document.getElementById("email").value;
+    // Hämta e-postadressen från formuläret
+    var email = document.getElementById("email").value;
 
-//     // Skicka e-post till din e-postadress
-//     sendEmail(email);
+    // Skicka e-post till din e-postadress
+    sendEmail(email);
 
-//     // Visa bekräftelsemeddelandet
-//     document.getElementById("confirmationMessage").style.display = "block";
+    // Visa bekräftelsemeddelandet
+    document.getElementById("confirmationMessage").style.display = "block";
 
-//     // Töm formulärfältet
-//     document.getElementById("email").value = "";
-// });
+    // Töm formulärfältet
+    document.getElementById("email").value = "";
+});
 
-// function sendEmail(email) {
-//     // Skapa en mailto-länk för att skicka e-post till din e-postadress
-//     var mailtoLink = "mailto:lillida_96@hotmail.com?subject=Prenumeration på nyhetsbrev&body=Denna person vill prenumerera på ert nyhetsbrev. E-postadress: " + email;
+function sendEmail(email) {
+    // Skapa en mailto-länk för att skicka e-post till din e-postadress
+    var mailtoLink = "mailto:info@clearity.nu?subject=Prenumeration på månadsbrev&body=Hej! Jag vill gärna prenumerera på klarhets månadsbrev. Min e-postadress är: " + email;
 
-//     // Öppna e-postklienten med mailto-länken
-//     window.location.href = mailtoLink;
+    // Öppna e-postklienten med mailto-länken
+    window.location.href = mailtoLink;
 
-//     // Alternativt kan du använda AJAX för att skicka e-post via en server och inte öppna användarens e-postklient.
-//     // Det skulle kräva serverkod (t.ex. med Node.js) för att hantera e-postskickandet.
-// }
+    // Alternativt kan du använda AJAX för att skicka e-post via en server och inte öppna användarens e-postklient.
+    // Det skulle kräva serverkod (t.ex. med Node.js) för att hantera e-postskickandet.
+}
 
 function clearSessionStorage() {
   sessionStorage.removeItem("scrollToSectionId");
