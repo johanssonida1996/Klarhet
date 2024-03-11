@@ -9,7 +9,7 @@ document.getElementById("subscriptionForm").addEventListener("submit", function 
   sendEmail(email);
 
   // Visa bekräftelsemeddelandet
-  document.getElementById("confirmationMessage").style.display = "block";
+  //document.getElementById("confirmationMessage").style.display = "block";
 
   // Töm formulärfältet
   document.getElementById("email").value = "";
@@ -17,7 +17,7 @@ document.getElementById("subscriptionForm").addEventListener("submit", function 
 
 function sendEmail(email) {
   // Skapa en mailto-länk för att skicka e-post till din e-postadress
-  var mailtoLink = "mailto:info@clearity.nu?subject=Prenumeration på månadsbrev&body=Hej! Jag vill gärna prenumerera på KLARHETs månadsbrev. Min e-postadress är: " + email;
+var mailtoLink = "mailto:info@clearity.nu?subject=Prenumeration på månadsbrev&body=Hej, jag önskar att prenumerera på KLARHETs månadsbrev. Min e-postadress är: " + email + "%0D%0A%0D%0AMvh, ";
 
   // Öppna e-postklienten med mailto-länken
   window.location.href = mailtoLink;
