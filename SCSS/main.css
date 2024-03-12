@@ -523,7 +523,7 @@
   border: 1px solid #bfa8a3;
   color: #bfa8a3;
 }
-@media (max-width: 384px) {
+@media (max-width: 406px) {
   .ij-moreInfo__content .ij-db a:nth-child(1) {
     margin-bottom: 1rem;
   }
